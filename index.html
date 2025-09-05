@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h1>Stopwatch</h1>
+        <div id="display" class="display">00:00:00.00</div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause" disabled>Pause</button>
+            <button id="reset" disabled>Reset</button>
+            <button id="lap" disabled>Lap</button>
+            <button id="export" disabled>Export Laps</button>
+            <button id="theme-toggle">🌙</button>
+        </div>
+        <div class="options">
+            <label>
+                <input type="checkbox" id="sound-toggle">
+                Sound on Lap
+            </label>
+            <label>
+                <input type="checkbox" id="auto-lap">
+                Auto Lap every
+                <input type="number" id="auto-lap-interval" min="1" value="60" style="width:50px;"> sec
+            </label>
+        </div>
+        <ul id="laps" class="laps"></ul>
+        <div id="best-lap" class="best-lap"></div>
+        <div id="average-lap" class="average-lap"></div>
+    </div>
+    <audio id="lap-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae3c7.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
